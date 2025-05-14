@@ -4,34 +4,46 @@ Agri-Energy Connect is an ASP.NET Core MVC web application that bridges sustaina
 
 Table of Contents
 
-Features
+Features:
 System Architecture
+
 User Roles
+
 Prerequisites
+
 Development Environment Setup
+
 Building and Running the Application
+
 Database Configuration
+
 Usage Guide
-Screenshots
+
 Technologies Used
-Future Enhancements
-Contributing
-License
+
+
 
 Features
 
 User Authentication: Secure login system with role-based authorization
+
 Role-Based Access Control: Different interfaces and capabilities for Farmers and Employees
+
 Farmer Management: Employees can add, view, and manage farmer accounts
+
 Product Management: Farmers can add their agricultural and energy products
+
 Advanced Filtering: Employees can filter products by farmer, category, and date range
+
 Responsive Design: Mobile-friendly interface with Bootstrap and Animate.css
 
 System Architecture
 Agri-Energy Connect follows the Model-View-Controller (MVC) architectural pattern:
 
 Models: Define data structures and business logic
+
 Views: Present data to users with responsive, intuitive interfaces
+
 Controllers: Handle user requests and update models and views accordingly
 
 The application uses Entity Framework Core for data access and Microsoft SQL Server for data storage.
