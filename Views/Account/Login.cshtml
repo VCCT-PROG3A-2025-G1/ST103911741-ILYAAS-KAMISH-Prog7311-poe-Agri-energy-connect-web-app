@@ -1,0 +1,79 @@
+﻿@model Prog7311_poe.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center animate__animated animate__fadeIn">
+    <div class="col-md-6">
+        <div class="card shadow-lg">
+            <div class="card-header bg-success text-white text-center">
+                <h2 class="animate__animated animate__fadeIn"><i class="bi bi-lock-fill"></i> Login</h2>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-3">
+                        <label asp-for="Username" class="form-label">
+                            <i class="bi bi-person-fill"></i> Username
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-success text-white">
+                                <i class="bi bi-person"></i>
+                            </span>
+                            <input asp-for="Username" class="form-control" placeholder="Enter your username" />
+                        </div>
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="Password" class="form-label">
+                            <i class="bi bi-key-fill"></i> Password
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-success text-white">
+                                <i class="bi bi-lock"></i>
+                            </span>
+                            <input asp-for="Password" class="form-control" placeholder="Enter your password" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input asp-for="RememberMe" class="form-check-input" />
+                        <label asp-for="RememberMe" class="form-check-label">Remember me</label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-lg animate__animated animate__pulse animate__infinite">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </button>
+                    </div>
+                </form>
+                <div class="mt-4 p-3 bg-light rounded">
+                    <h5 class="text-center"><i class="bi bi-info-circle"></i> Demo Accounts</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-2">
+                                <div class="card-header bg-primary text-white">
+                                    <i class="bi bi-person-badge"></i> Employee
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Username:</strong> employee1</p>
+                                    <p><strong>Password:</strong> password123</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-2">
+                                <div class="card-header bg-info text-white">
+                                    <i class="bi bi-person-fill"></i> Farmer
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Username:</strong> farmer1</p>
+                                    <p><strong>Password:</strong> password123</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

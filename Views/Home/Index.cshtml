@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    .card:hover {
+        transform: translateY(-5px);
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+        background: linear-gradient(to right, #e0f7fa, #fff);
+    }
+</style>
+
+<div class="text-center my-5 animate__animated animate__fadeInDown">
+    <h1 class="display-4 fw-bold">Welcome to <span class="text-success">Agri-Energy Connect</span></h1>
+    <p class="lead">Bridging sustainable agriculture with green energy solutions</p>
+    <a href="/Account/Login" class="btn btn-success btn-lg mt-3 animate__animated animate__fadeInUp animate__delay-1s">
+        Get Started
+    </a>
+</div>
+
+<div class="row mt-5 animate__animated animate__fadeInUp animate__delay-2s">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-tree text-success" style="font-size: 3rem;"></i>
+                <h3 class="card-title mt-3">Sustainable Farming</h3>
+                <p class="card-text">Share best practices in sustainable farming, including organic techniques, water conservation, and soil health maintenance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-sun text-warning" style="font-size: 3rem;"></i>
+                <h3 class="card-title mt-3">Green Energy Solutions</h3>
+                <p class="card-text">Discover energy solutions for farms—solar irrigation, wind turbines, and biogas systems tailored for agriculture.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center">
+                <i class="bi bi-people text-primary" style="font-size: 3rem;"></i>
+                <h3 class="card-title mt-3">Collaboration</h3>
+                <p class="card-text">Connect with farmers, energy experts, and innovators to share knowledge and grow a sustainable future together.</p>
+            </div>
+        </div>
+    </div>
+</div>

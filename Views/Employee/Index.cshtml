@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Employee Dashboard";
+}
+
+<div class="text-center mb-4 animate__animated animate__fadeIn">
+    <h1><i class="bi bi-grid-3x3-gap-fill"></i> Employee Dashboard</h1>
+    <p class="lead">Manage farmers and their products with ease</p>
+</div>
+
+<div class="row">
+    <div class="col-md-6 animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3><i class="bi bi-people-fill"></i> Farmer Management</h3>
+            </div>
+            <div class="card-body">
+                <p>Add new farmers to the system and manage their information with ease.</p>
+                <div class="d-grid gap-2">
+                    <a asp-action="AddFarmer" class="btn btn-success">
+                        <i class="bi bi-person-plus-fill"></i> Add New Farmer
+                    </a>
+                    <a asp-action="ViewFarmers" class="btn btn-outline-success">
+                        <i class="bi bi-list-ul"></i> View All Farmers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 animate__animated animate__fadeInRight" style="animation-delay: 0.4s">
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3><i class="bi bi-box-seam-fill"></i> Product Management</h3>
+            </div>
+            <div class="card-body">
+                <p>View and filter products from farmers in the system with advanced filtering options.</p>
+                <div class="d-grid">
+                    <a asp-action="ViewProducts" class="btn btn-success">
+                        <i class="bi bi-search"></i> Browse Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12 animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3><i class="bi bi-info-circle-fill"></i> Quick Stats</h3>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <h1 class="display-4 text-success">
+                                <i class="bi bi-people"></i>
+                            </h1>
+                            <h5>Total Farmers</h5>
+                            <p class="lead">@ViewBag.FarmerCount</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <h1 class="display-4 text-primary">
+                                <i class="bi bi-boxes"></i>
+                            </h1>
+                            <h5>Total Products</h5>
+                            <p class="lead">@ViewBag.ProductCount</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3">
+                            <h1 class="display-4 text-warning">
+                                <i class="bi bi-tags"></i>
+                            </h1>
+                            <h5>Product Categories</h5>
+                            <p class="lead">@ViewBag.CategoryCount</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
