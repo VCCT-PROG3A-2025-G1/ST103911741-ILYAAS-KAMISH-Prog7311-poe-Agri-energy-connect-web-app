@@ -22,6 +22,6 @@ namespace Prog7311_poe.Models
         public int FarmerId { get; set; }
 
         // Navigation property
-        public Farmer Farmer { get; set; } = null!;
+        public Farmer? Farmer { get; set; } 
     }
 }
