@@ -1,185 +1,143 @@
-# Prog7311 poe
-Agri-Energy Connect
-Agri-Energy Connect is an ASP.NET Core MVC web application that bridges sustainable agriculture with green energy solutions by enabling farmers to manage their products and allowing employees to oversee farmer registrations and product listings.
+# 🌱 Agri-Energy Connect – PROG7311 POE
 
-Table of Contents
+Agri-Energy Connect is an ASP.NET Core MVC web application that bridges sustainable agriculture with green energy. It enables farmers to manage their product listings and allows employees to register farmers, view products, and apply advanced filtering tools.
 
-Features:
-System Architecture
+---
 
-User Roles
+## 📋 Table of Contents
 
-Prerequisites
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [User Roles](#user-roles)
+- [Prerequisites](#prerequisites)
+- [Setup Instructions](#setup-instructions)
+- [Demo Login Accounts](#demo-login-accounts)
+- [Usage Guide](#usage-guide)
+- [Technologies Used](#technologies-used)
 
-Development Environment Setup
+---
 
-Building and Running the Application
+## ✅ Features
 
-Database Configuration
+- 🔐 Secure login with role-based access
+- 👨‍🌾 Farmer and 👨‍💼 Employee user roles
+- 🌿 Product management (add, view, filter)
+- 🧠 Advanced filtering (by category and date)
+- 📱 Responsive UI with Bootstrap 5
+- 💾 SQL Server data persistence
 
-Usage Guide
+---
 
-Technologies Used
+## 🏗️ System Architecture
+
+- **MVC Pattern** (Model-View-Controller)
+- **Entity Framework Core** (code-first)
+- **SQL Server** for data storage
+- Layered logic with clean separation of concerns
+
+---
+
+## 👥 User Roles
+
+### 👨‍🌾 Farmer
+- Log in and manage own products
+- Add new agricultural or green energy products
+- View product dashboard
+
+### 👨‍💼 Employee
+- Register new farmers
+- View all farmers and their products
+- Filter products by category or date
+
+---
+
+## 🛠️ Prerequisites
+
+Before running the project, install:
+
+- [.NET 6.0 SDK or later](https://dotnet.microsoft.com/download)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/)
+- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (Express or Developer)
+- [SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. **Clone the Repository**
 
 
+git clone https://github.com/ilyaas2004/Prog7311-poe-Agri-energy-connect-web-app.git
+cd Prog7311-poe-Agri-energy-connect-web-app
 
-Features
+**Update Connection String**
+Edit appsettings.json:
 
-User Authentication: Secure login system with role-based authorization
 
-Role-Based Access Control: Different interfaces and capabilities for Farmers and Employees
-
-Farmer Management: Employees can add, view, and manage farmer accounts
-
-Product Management: Farmers can add their agricultural and energy products
-
-Advanced Filtering: Employees can filter products by farmer, category, and date range
-
-Responsive Design: Mobile-friendly interface with Bootstrap and Animate.css
-
-System Architecture
-Agri-Energy Connect follows the Model-View-Controller (MVC) architectural pattern:
-
-Models: Define data structures and business logic
-
-Views: Present data to users with responsive, intuitive interfaces
-
-Controllers: Handle user requests and update models and views accordingly
-
-The application uses Entity Framework Core for data access and Microsoft SQL Server for data storage.
-User Roles
-Employee Role
-
-Add and manage farmer accounts
-View all farmers and their products
-Filter and search products across all farmers
-View system statistics and dashboard
-
-Farmer Role
-
-Manage personal product listings
-Add new agricultural and energy products
-View own dashboard with product statistics
-
-Prerequisites
-Before setting up the development environment, ensure you have the following installed:
-
-.NET 6.0 SDK or later
-Visual Studio 2022 or Visual Studio Code
-SQL Server (Express or Developer edition)
-SQL Server Management Studio (optional, for database management)
-
-Development Environment Setup
-1. Clone the Repository
-bashgit clone https://github.com/ilyaas2004/Prog7311-poe-Agri-energy-connect-web-app
-cd agri-energy-connect
-2. Restore NuGet Packages
-Open the project in Visual Studio and restore NuGet packages, or use the command line:
-bashdotnet restore
-3. Update Connection String
-Open the appsettings.json file and update the connection string to point to your SQL Server instance:
-json"ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=AgriEnergyConnectDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+"ConnectionStrings": {
+  "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=AgriEnergyConnectDB;Trusted_Connection=True;"
 }
-Building and Running the Application
+**Set Up the Database**
+ Run EF Migration
+bash:
+
+dotnet ef database update
+
+
+
+**🔑 Demo Login Accounts**
+Role	Username	Password
+Employee	employee1	password123
+Farmer	farmer1	password123
+
+**🚀 Running the App**
 Using Visual Studio
+Open Prog7311_poe.sln
 
-Open the solution file (Prog7311_poe.sln) in Visual Studio.
-Build the solution by pressing F6 or selecting Build > Build Solution.
-Press F5 or click the "Play" button to run the application.
+Press F5 or click the ▶️ "Run" button
 
-Using Command Line
-bash# Build the project
-dotnet build
+**📘 Usage Guide
+👨‍💼 Employee**
+Add Farmer: Use the navigation to add a new farmer profile
 
-# Run the application
-dotnet run --project Prog7311_poe
-The application will start and be available at https://localhost:7123 (or a similar port).
-Database Configuration
-The application uses Entity Framework Core Code-First approach. The database will be created automatically when you first run the application.
-Manual Database Setup (if needed)
-If you prefer to set up the database manually:
+View Farmers: See a list of all registered farmers
 
-Create a new database named AgriEnergyConnectDB in SQL Server.
-Run the following command to apply migrations:
+Filter Products: Use filter panel by category or date
 
-bashdotnet ef database update
-Demo Accounts
-The system comes with pre-configured demo accounts:
-Employee Account:
+**👨‍🌾 Farmer**
+Add Product: Add new agricultural or green energy products
 
-Username: employee1
-Password: password123
+View Products: See your own listed products
 
-Farmer Account:
-
-Username: farmer1
-Password: password123
-
-Usage Guide
-Employee Workflows
-
-Adding a New Farmer:
-
-Log in as an employee
-Navigate to "Add Farmer" in the navigation bar
-Fill in the farmer details and login credentials
-Submit the form
-
-
-Viewing Farmers:
-
-Navigate to "View Farmers" in the navigation bar
-Browse the list of all registered farmers
-
-
-Filtering Products:
-
-Navigate to "View Products"
-Use the filter panel to search by farmer, category, or date range
-Apply filters to find specific products
-
-
-
-Farmer Workflows
-
-Adding a New Product:
-
-Log in as a farmer
-Navigate to "Add Product" in the navigation bar
-Fill in the product details (name, category, production date)
-Submit the form
-
-
-Viewing Your Products:
-
-Navigate to "My Dashboard"
-View all your products listed in the table
-
-
-
-
-
-Backend:
-
+**💻 Technologies Used
+Backend:**
 ASP.NET Core 6.0 MVC
+
 Entity Framework Core
+
+C#
+
 SQL Server
-C# Programming Language
 
-
-Frontend:
-
+**Frontend:**
 HTML5, CSS3, JavaScript
+
 Bootstrap 5
+
 Animate.css
-Font Awesome & Bootstrap Icons
+
 jQuery
 
+Font Awesome & Bootstrap Icons
 
-Security:
-
+**Security:**
 Cookie Authentication
+
 Role-Based Authorization
+
 CSRF Protection
+
 Input Validation
+
+
+
