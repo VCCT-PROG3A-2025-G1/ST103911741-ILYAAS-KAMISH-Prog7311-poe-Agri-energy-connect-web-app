@@ -86,9 +86,8 @@ dotnet ef database update
 
 
 **🔑 Demo Login Accounts**
-Role	Username	Password
-Employee	employee1	password123
-Farmer	farmer1	password123
+-Employee:	employee1	password123
+-Farmer:	farmer1	password123
 
 **🚀 Running the App**
 Using Visual Studio
